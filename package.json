@@ -1,0 +1,29 @@
+{
+  "name": "webapi",
+  "version": "1.0.0",
+  "description": "Web API For Arduino",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardcutzh/Practica1_Arqui2.git"
+  },
+  "keywords": [
+    "Arduino",
+    "NodeJS",
+    "Docker"
+  ],
+  "author": "Ricardo Antonio Cutz Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardcutzh/Practica1_Arqui2/issues"
+  },
+  "homepage": "https://github.com/ricardcutzh/Practica1_Arqui2#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
