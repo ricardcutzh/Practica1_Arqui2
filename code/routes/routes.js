@@ -8,9 +8,7 @@ const CoderController = require("../controllers/CoderController");
 
 router.route('/API/status').get(function(req, res){
     res.status(200);
-    res.send({
-        "message":"API REST Working",
-    });
+    res.send("API REST Working");
 });
 
 router.route('/Coder').get(CoderController.coder_principal);
