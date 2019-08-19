@@ -26,8 +26,8 @@
             <div class="col-md-12">
               <div class="form-label-group">
                 <input type="text" id="frase" name="frase" class="form-control" placeholder="First name" required="required"
-                  autofocus="autofocus">
-                <label for="Frase">Ingrese la frase a codificar:</label>
+                  >
+                <!--<label for="Frase">Ingrese la frase a codificar:</label>-->
               </div>
             </div>
           </div>
@@ -36,8 +36,8 @@
             <div class="col-md-12">
               <div class="form-label-group">
                 <select id="tipo" name="tipo" class="form-control" autofocus="autofocus">
-                  <option value="T">Traducccion</option>
-                  <option value="A">Aprendizaje</option>
+                  <option value="Traducccion">Traducccion</option>
+                  <option value="Aprendizaje">Aprendizaje</option>
                 </select>
               </div>
             </div>
@@ -81,10 +81,14 @@
                 </tr>
               </tfoot>
               <tbody>
-                <td>1</td>
-                <td>Hola Mundo</td>
-                <td>12:10 A.M</td>
-                <td>Enviada</td>
+                <% for(var i = 0; i < frases.length; i++){%>
+                  <tr>
+                    <td><%=frases[i].id %></td>
+                    <td><%=frases[i].cadena %></td>
+                    <td><%=frases[i].time %></td>
+                    <td><%=frases[i].tipo %></td>
+                  </tr>
+                <% } %>
               </tbody>
             </table>
           </div>

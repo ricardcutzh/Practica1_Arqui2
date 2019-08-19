@@ -9,7 +9,8 @@ const fraseSchema = mongoose.Schema({
     _id: mongoose.Types.ObjectId,
     cadena: String,
     time: String,
-    tipo: String
+    tipo: String,
+    state: String
 });
 
 module.exports = mongoose.model('Frase', fraseSchema);

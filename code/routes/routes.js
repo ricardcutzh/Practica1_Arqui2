@@ -26,24 +26,15 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-router.route('/API/get_string').get(function (req, res) {
-    index = getRandomInt(0,5);
-    frases = [
-        "hola mundo",
-        "christopher Resultados",
-        "christian el Abuelo",
-        "hola que pex",
-        "ahora si sale",
-        "esto es una prueba"
-    ];
-    res.status(200);
-    res.send(frases[index]);
-});
+router.route('/API/get_string').get(CoderController.get_last_frase);
 
 router.route('/API/status').get(function (req, res) {
     res.status(200);
     res.send("API REST Working");
 });
+
+router.route('/API/empty').get(CoderController.empty_frases);
+
 ////////////////////////////////////////////////////////////////////////
 
 module.exports = router;
